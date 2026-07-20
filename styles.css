@@ -259,6 +259,12 @@ a:hover { text-decoration: underline; }
   color: var(--text-muted);
   font-size: 0.92rem;
 }
+.timeline-teams {
+  margin: 2px 0 0;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-style: italic;
+}
 .timeline-date {
   margin: 0;
   color: var(--text-muted);

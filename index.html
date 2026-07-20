@@ -19,6 +19,7 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#leadership">Leadership</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#education">Education</a></li>
@@ -102,16 +103,19 @@
             <div>
               <h3>Research Software Engineer</h3>
               <p class="timeline-org">National Renewable Energy Laboratory · Golden, Colorado</p>
+              <p class="timeline-teams">Teams: e-mission (OpenPATH) · RouteE Compass · EVI-Pro · EVI-Grid National Framework · On-Demand Transit Research</p>
             </div>
             <p class="timeline-date">Aug 2023 – Sep 2025</p>
           </div>
           <ul>
-            <li>Developed and validated a 1TB data-processing pipeline for the national EV Infrastructure grid simulation on HPC using Python, Polars, Pydantic, and Parquet, cutting execution time from 10 hours to 30 minutes (95%).</li>
-            <li>Designed automated testing workflows (GitHub Actions, Docker, pytest), cutting manual testing overhead 60%, and redesigned OpenPATH (e-mission)'s public dashboard (Python, JavaScript, MongoDB), serving 5,000+ users across 34 deployments.</li>
+            <li>Developed, deployed, and maintained the public-facing OpenPATH (e-mission) dashboard (Python, Docker Compose, JavaScript, MongoDB), supporting 5,000+ active users across 34 deployment programs; added dynamic configurations and inferred labels for 100% stacked bar charts, and redesigned its visualization layer, replacing pie charts with data-rich stacked bar charts.</li>
+            <li>Architected a data validation layer using Pydantic to enforce strict schemas for incoming YAML configurations, and built a large-scale (~1TB) HPC data-processing pipeline for the EV Infrastructure Grid National Framework simulation, cutting execution time from 10 hours to 30 minutes (95%) using Polars and Parquet.</li>
+            <li>Designed automated testing workflows (GitHub Actions, Docker, pytest) for the em-public-dashboard repo, increasing test reliability and cutting manual testing overhead by up to 60%.</li>
             <li>Built a machine-learning pipeline (Random Forest with feature engineering and cross-validation) for deployment-stage commute-mode inference over large-scale mobility datasets.</li>
-            <li>Optimized RouteE Compass (open-source energy-aware routing engine, Rust) by refactoring JSON configuration parsing and error handling; recognized with the U.S. DOE-VTO AMC Team Award 2025 for enabling Google Maps' eco-routing.</li>
+            <li>Contributed to RouteE Compass (Rust routing engine enabling Google Maps' eco-routing): introduced TOML configuration injection, refactored the core crate and JSON configuration parsing, implemented an SI-unit energy model, and led conda-forge packaging for OSX arm64; recognized with the U.S. DOE-VTO AMC Team Award 2025.</li>
+            <li>Built automated documentation workflows for the EVI-Pro project (GitHub Actions, Jupyter Book, GitHub Pages) to publish an internal documentation repo whenever a new release triggers in the private source repo.</li>
           </ul>
-          <p class="timeline-tags">Python · Rust · Polars · Docker · GitHub Actions · pytest · HPC</p>
+          <p class="timeline-tags">Python · Rust · Polars · Pydantic · Docker · GitHub Actions · pytest · HPC</p>
         </article>
 
         <article class="timeline-item">
@@ -119,12 +123,13 @@
             <div>
               <h3>Software Engineer Intern II</h3>
               <p class="timeline-org">Yahoo Inc. · Illinois, USA</p>
+              <p class="timeline-teams">Team: Edge Infrastructure</p>
             </div>
             <p class="timeline-date">May 2023 – Aug 2023</p>
           </div>
           <ul>
-            <li>Integrated four fuzzing engines (Google FuzzTest, LibFuzzer, AFL++, HonggFuzz) into Yahoo's production DNS infrastructure in C++17, reporting two critical memory-management vulnerabilities.</li>
-            <li>Automated the workflow with CI/CD pipelines (ScrewDriver, CMake) and authored a ~50-page engineering report analyzing engine tradeoffs.</li>
+            <li>Researched and integrated four fuzzing engines (Google FuzzTest, LibFuzzer, AFL++, HonggFuzz) into Yahoo's large-scale production DNS infrastructure in C++17, identifying and reporting two critical memory-management vulnerabilities.</li>
+            <li>Engineered a 24/7 automated fuzzing pipeline and CI/CD workflows (ScrewDriver, Makefile, CMake) within a Dockerized Linux environment, and authored a ~50-page engineering report analyzing engine tradeoffs and LLVM/OpenStack integration.</li>
           </ul>
           <p class="timeline-tags">C++ · LLVM · Docker · Linux · Fuzzing</p>
         </article>
@@ -133,25 +138,63 @@
           <div class="timeline-header">
             <div>
               <h3>Software Engineer I &amp; II</h3>
-              <p class="timeline-org">Philips India Ltd. (Healthcare – Ultrasound) · Bangalore, India</p>
+              <p class="timeline-org">Philips India Ltd. (Ultrasound R&amp;D) · Bangalore, India</p>
+              <p class="timeline-teams">Teams: Lumify iOS App · Rhythm Service Platform · Women Health Care · Workflow Enhancement</p>
             </div>
             <p class="timeline-date">Jun 2018 – Jun 2022</p>
           </div>
           <ul>
-            <li>Architected a multi-threaded, low-latency (5ms) real-time audio processing library for the cross-platform Lumify app (Swift, C++, AVFoundation), meeting IEC 62304 safety-critical standards.</li>
-            <li>Triaged and resolved critical multi-threading and connectivity issues in a 20GB legacy C++ codebase; built a C++ static-analysis CLI tool, improving delivery speed by 30% and resolving ten high-priority production incidents.</li>
-            <li>Designed a secure multi-level user-authentication portal (C++, C#, WPF/MVVM); mentored new recruits across Agile projects.</li>
+            <li><strong>Lumify iOS App:</strong> architected a multi-threaded, low-latency (5ms) real-time audio processing library (Swift, C++, AVFoundation/AVAudioEngine) for Pulse Wave Doppler playback, collaborating with clinical scientists and meeting IEC 62304 safety-critical standards; streamlined UI development in Swift by replacing manual XIBs with programmatic StackViews, cutting new feature development time by 80% while shipping 10+ new UI controls across 10+ device sizes and orientations.</li>
+            <li><strong>Rhythm Service Platform</strong> (C++, MVVM): designed the UI and backend for multi-level user login using a pub-sub design pattern and layered architecture, maintaining &gt;95% platform-layer and &gt;85% application-layer unit test coverage.</li>
+            <li><strong>Women Health Care &amp; Workflow Enhancement:</strong> shipped ultrasound-specific features (Quad AFI, High Q Doppler, 3D Preset within Preset) and a new UI/UX framework for the Blaze Toolbar supporting a dynamic array of transducers, reducing exam execution time by up to 40%.</li>
+            <li>Triaged and resolved critical multi-threading and connectivity issues in a 20GB legacy C++ codebase; built a C++/C# static-analysis CLI tool, improving delivery speed by 30% and resolving ten high-priority production incidents.</li>
+            <li>Designed a secure multi-level user-authentication portal (C++, C#, WPF/MVVM) with AES/SHA-256 encryption.</li>
           </ul>
-          <p class="timeline-tags">C++ · Swift · C# · WPF · IEC 62304</p>
+          <p class="timeline-tags">C++ · Swift · C# · WPF · AVFoundation · IEC 62304</p>
         </article>
 
       </div>
     </div>
   </section>
 
-  <section id="projects" class="section">
+  <section id="leadership" class="section">
     <div class="container">
-      <h2 class="section-title"><span class="section-num">03</span> Projects</h2>
+      <h2 class="section-title"><span class="section-num">03</span> Leadership</h2>
+      <div class="timeline">
+
+        <article class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <h3>Project Team Leader</h3>
+              <p class="timeline-org">Arizona State University · Tempe, Arizona</p>
+            </div>
+            <p class="timeline-date">Jan 2023 – May 2023</p>
+          </div>
+          <ul>
+            <li>Led a team of seven graduate students in a research project on information assurance and security in machine learning, targeting malicious URL detection in social networks; collaborated with the TA and professor and used Gantt charts to plan the project timeline while investigating DCNN and CNN approaches.</li>
+          </ul>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <h3>Project Mentor</h3>
+              <p class="timeline-org">Philips Innovation Campus · Bangalore, India</p>
+            </div>
+            <p class="timeline-date">May 2020 – Jun 2022</p>
+          </div>
+          <ul>
+            <li>Mentored recruits and software engineers through onboarding and issue resolution across Agile projects, improving completion tracking by 20%.</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title"><span class="section-num">04</span> Projects</h2>
       <div class="project-grid">
 
         <article class="project-card project-card-featured">
@@ -163,10 +206,17 @@
         </article>
 
         <article class="project-card">
+          <p class="project-tag">Distributed Systems</p>
+          <h3>Distributed Banking System</h3>
+          <p>Distributed banking system incorporating Lamport's logical clocks for causal event ordering and a client-centric consistency model to ensure data integrity across replicated servers.</p>
+          <p class="project-tags">Python · gRPC</p>
+        </article>
+
+        <article class="project-card">
           <p class="project-tag">Cloud</p>
           <h3>Scalable Serverless Cloud Pipeline</h3>
-          <p>Serverless, high-throughput data pipeline on AWS Lambda, S3, and SQS with Docker, demonstrating cloud-native design patterns.</p>
-          <p class="project-tags">AWS Lambda · S3 · SQS · Docker</p>
+          <p>Serverless, high-throughput data pipeline for image and video processing on AWS Lambda, S3, SQS, and ECR with Docker, demonstrating cloud-native design patterns.</p>
+          <p class="project-tags">AWS Lambda · ECR · S3 · SQS · Docker</p>
         </article>
 
         <article class="project-card">
@@ -188,9 +238,9 @@
     </div>
   </section>
 
-  <section id="skills" class="section section-alt">
+  <section id="skills" class="section">
     <div class="container">
-      <h2 class="section-title"><span class="section-num">04</span> Skills</h2>
+      <h2 class="section-title"><span class="section-num">05</span> Skills</h2>
       <div class="skills-grid">
         <div class="skill-group">
           <h3>Languages</h3>
@@ -216,9 +266,9 @@
     </div>
   </section>
 
-  <section id="education" class="section">
+  <section id="education" class="section section-alt">
     <div class="container">
-      <h2 class="section-title"><span class="section-num">05</span> Education &amp; Awards</h2>
+      <h2 class="section-title"><span class="section-num">06</span> Education &amp; Awards</h2>
 
       <div class="edu-block">
         <h3>Master of Computer Science</h3>
@@ -244,9 +294,9 @@
     </div>
   </section>
 
-  <section id="contact" class="section section-alt">
+  <section id="contact" class="section">
     <div class="container">
-      <h2 class="section-title"><span class="section-num">06</span> Get in Touch</h2>
+      <h2 class="section-title"><span class="section-num">07</span> Get in Touch</h2>
       <p class="contact-lede">Open to conversations about software engineering, ML systems, and research collaborations.</p>
       <div class="contact-links">
         <a href="mailto:anshrest@asu.edu" class="btn btn-primary">anshrest@asu.edu</a>
