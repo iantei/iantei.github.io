@@ -36,16 +36,24 @@
 
   <section class="hero">
     <div class="container">
-      <p class="eyebrow">Software Engineer</p>
+      <div class="mode-toggle" role="group" aria-label="Portfolio focus">
+        <button type="button" class="mode-btn active" data-mode="general">General</button>
+        <button type="button" class="mode-btn" data-mode="ios">iOS Developer</button>
+      </div>
+      <p class="eyebrow" data-text-general="Software Engineer" data-text-ios="iOS &amp; Systems Engineer">Software Engineer</p>
       <h1>Ananta Narayan Shrestha</h1>
-      <p class="hero-lede">
+      <p class="hero-lede"
+         data-text-general="Software engineer with 6+ years of experience building large-scale data pipelines, distributed systems, and cloud-native services — spanning terabyte-scale HPC data processing, GenAI/RAG systems, and safety-critical C++ software."
+         data-text-ios="iOS and systems engineer with 6+ years of experience, including 4 years shipping FDA-regulated software at Philips — where I was the sole developer of a real-time audio module for the Lumify iOS app (Swift, C++, AVFoundation), owning it from requirements through delivery.">
         Software engineer with 6+ years of experience building large-scale data pipelines,
         distributed systems, and cloud-native services — spanning terabyte-scale HPC data
         processing, GenAI/RAG systems, and safety-critical C++ software.
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="Ananta_Shrestha_Resume.pdf" class="btn btn-secondary" download>Download Resume</a>
+        <a href="Ananta_Shrestha_Resume.pdf" class="btn btn-secondary" download
+           data-href-general="Ananta_Shrestha_Resume.pdf" data-href-ios="Ananta_Shrestha_Resume_iOS.pdf"
+           data-label-general="Download Resume" data-label-ios="Download Resume (iOS)">Download Resume</a>
         <a href="#contact" class="btn btn-secondary">Get in Touch</a>
       </div>
       <div class="hero-meta">
@@ -62,7 +70,8 @@
     <div class="container">
       <h2 class="section-title"><span class="section-num">01</span> About</h2>
       <div class="about-grid">
-        <p>
+        <p data-text-general="I'm a software engineer with a Master's in Computer Science from Arizona State University, currently building an AI-powered chatbot on AWS with Anthropic Claude and retrieval-augmented generation (RAG) at Exito Tech Inc. My background spans large-scale data pipelines and distributed systems, cloud-native infrastructure, and safety-critical embedded software — from terabyte-scale HPC pipelines at NREL, to fuzzing production DNS infrastructure at Yahoo, to real-time audio processing at Philips."
+           data-text-ios="I'm an iOS and systems engineer with a Master's in Computer Science from Arizona State University. At Philips Ultrasound R&amp;D I was the sole developer of a real-time, low-latency audio module for the Lumify iOS app (Swift, C++, AVFoundation/AVAudioEngine), shipped in an FDA-regulated App Store medical product — owning it from requirements through delivery. I'm currently building an AI-powered chatbot on AWS with Anthropic Claude and RAG at Exito Tech Inc.">
           I'm a software engineer with a Master's in Computer Science from Arizona State University, currently
           building an AI-powered chatbot on AWS with Anthropic Claude and retrieval-augmented generation (RAG)
           at Exito Tech Inc. My background spans large-scale data pipelines and distributed systems, cloud-native
@@ -98,7 +107,7 @@
           <p class="timeline-tags">AWS · Anthropic Claude · RAG</p>
         </article>
 
-        <article class="timeline-item">
+        <article class="timeline-item" data-emphasis="ios-secondary">
           <div class="timeline-header">
             <div>
               <h3>Research Software Engineer</h3>
@@ -134,7 +143,7 @@
           <p class="timeline-tags">C++ · LLVM · Docker · Linux · Fuzzing</p>
         </article>
 
-        <article class="timeline-item">
+        <article class="timeline-item" data-emphasis="ios-primary">
           <div class="timeline-header">
             <div>
               <h3>Software Engineer I &amp; II</h3>
@@ -148,7 +157,7 @@
             <li><strong>Rhythm Service Platform</strong> (C++, MVVM): designed the UI and backend for multi-level user login using a pub-sub design pattern and layered architecture, maintaining &gt;95% platform-layer and &gt;85% application-layer unit test coverage.</li>
             <li><strong>Women Health Care &amp; Workflow Enhancement:</strong> shipped ultrasound-specific features (Quad AFI, High Q Doppler, 3D Preset within Preset) and a new UI/UX framework for the Blaze Toolbar supporting a dynamic array of transducers, reducing exam execution time by up to 40%.</li>
             <li>Triaged and resolved critical multi-threading and connectivity issues in a 20GB legacy C++ codebase; built a C++/C# static-analysis CLI tool, improving delivery speed by 30% and resolving ten high-priority production incidents.</li>
-            <li>Designed a secure multi-level user-authentication portal (C++, C#, WPF/MVVM) with AES/SHA-256 encryption.</li>
+            <li>Designed a secure multi-level user-authentication portal (C++, C#, WPF/MVVM) with AES/SHA-256 encryption; drove end-to-end Agile feature delivery including Integration Test Plan authoring and documentation.</li>
           </ul>
           <p class="timeline-tags">C++ · Swift · C# · WPF · AVFoundation · IEC 62304</p>
         </article>
@@ -208,7 +217,7 @@
         <article class="project-card">
           <p class="project-tag">Distributed Systems</p>
           <h3>Distributed Banking System</h3>
-          <p>Distributed banking system incorporating Lamport's logical clocks for causal event ordering and a client-centric consistency model to ensure data integrity across replicated servers.</p>
+          <p>Distributed banking system implementing client-centric consistency models (Read-Your-Writes, Monotonic Writes) and Lamport's logical clocks for causal event ordering to ensure data integrity across replicated servers.</p>
           <p class="project-tags">Python · gRPC</p>
         </article>
 
@@ -242,23 +251,27 @@
     <div class="container">
       <h2 class="section-title"><span class="section-num">05</span> Skills</h2>
       <div class="skills-grid">
-        <div class="skill-group">
+        <div class="skill-group" data-skill="ios">
+          <h3>iOS &amp; Mobile</h3>
+          <p>Swift, UIKit, AVFoundation / AVAudioEngine, MVVM, Xcode, cross-platform C++ integration, real-time audio</p>
+        </div>
+        <div class="skill-group" data-skill="languages">
           <h3>Languages</h3>
           <p>Python, C++, Rust, Swift, Java, C#, JavaScript, SQL</p>
         </div>
-        <div class="skill-group">
+        <div class="skill-group" data-skill="data">
           <h3>Data &amp; Distributed Systems</h3>
           <p>PostgreSQL, MongoDB, Polars, Parquet, ChromaDB, distributed transactions &amp; consistency, HPC (Slurm)</p>
         </div>
-        <div class="skill-group">
+        <div class="skill-group" data-skill="cloud">
           <h3>Cloud &amp; DevOps</h3>
           <p>AWS (EC2, S3, SQS, Lambda, IAM, ECR), Docker, Docker Compose, GitHub Actions (CI/CD)</p>
         </div>
-        <div class="skill-group">
+        <div class="skill-group" data-skill="genai">
           <h3>GenAI</h3>
           <p>Anthropic API, LangChain, RAG pipelines, Ollama, LLM-assisted development tooling</p>
         </div>
-        <div class="skill-group">
+        <div class="skill-group" data-skill="practices">
           <h3>Practices</h3>
           <p>Automated testing, technical documentation, mentoring &amp; onboarding, Agile, SDLC</p>
         </div>
@@ -302,7 +315,9 @@
         <a href="mailto:anshrest@asu.edu" class="btn btn-primary">anshrest@asu.edu</a>
         <a href="https://www.linkedin.com/in/ananta-narayan-shrestha/" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
         <a href="https://github.com/iantei" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
-        <a href="Ananta_Shrestha_Resume.pdf" class="btn btn-secondary" download>Download Resume (PDF)</a>
+        <a href="Ananta_Shrestha_Resume.pdf" class="btn btn-secondary" download
+           data-href-general="Ananta_Shrestha_Resume.pdf" data-href-ios="Ananta_Shrestha_Resume_iOS.pdf"
+           data-label-general="Download Resume (PDF)" data-label-ios="Download Resume (iOS, PDF)">Download Resume (PDF)</a>
       </div>
     </div>
   </section>

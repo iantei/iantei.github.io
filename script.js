@@ -40,3 +40,36 @@ themeToggle.addEventListener("click", () => {
   applyTheme(next);
   localStorage.setItem(STORAGE_KEY, next);
 });
+
+// General / iOS Developer mode toggle (persisted in localStorage)
+const modeButtons = document.querySelectorAll(".mode-btn");
+const MODE_KEY = "portfolio-mode";
+
+function applyMode(mode) {
+  document.body.dataset.mode = mode;
+
+  modeButtons.forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.mode === mode);
+  });
+
+  document.querySelectorAll("[data-text-general]").forEach((el) => {
+    el.textContent = mode === "ios" ? el.dataset.textIos : el.dataset.textGeneral;
+  });
+
+  document.querySelectorAll("[data-href-general]").forEach((el) => {
+    el.href = mode === "ios" ? el.dataset.hrefIos : el.dataset.hrefGeneral;
+    if (el.dataset.labelGeneral) {
+      el.textContent = mode === "ios" ? el.dataset.labelIos : el.dataset.labelGeneral;
+    }
+  });
+}
+
+modeButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const mode = btn.dataset.mode;
+    localStorage.setItem(MODE_KEY, mode);
+    applyMode(mode);
+  });
+});
+
+applyMode(localStorage.getItem(MODE_KEY) || "general");
