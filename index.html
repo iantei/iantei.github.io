@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ananta Narayan Shrestha — Software Engineer</title>
+<meta name="description" content="Portfolio of Ananta Narayan Shrestha — Software Engineer specializing in ML pipelines, systems programming, and cloud infrastructure.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="#top" class="nav-brand">Ananta Shrestha</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Software Engineer</p>
+      <h1>Ananta Narayan Shrestha</h1>
+      <p class="hero-lede">
+        I build machine learning pipelines, high-performance systems, and cloud infrastructure —
+        currently researching transportation ML at the National Renewable Energy Laboratory.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+      </div>
+      <div class="hero-meta">
+        <span>Tempe, Arizona</span>
+        <span aria-hidden="true">·</span>
+        <a href="https://github.com/iantei" target="_blank" rel="noopener">github.com/iantei</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://www.linkedin.com/in/ananta-narayan-shrestha/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="section-num">01</span> About</h2>
+      <div class="about-grid">
+        <p>
+          I'm a software engineer with a Master's in Computer Science from Arizona State University,
+          and hands-on experience spanning machine learning pipelines, embedded systems programming, and
+          cloud-native infrastructure. My background moves across the stack — from low-latency audio engines
+          on medical ultrasound devices in C++/Swift, to fuzzing production DNS infrastructure at Yahoo, to
+          building ML-driven transportation research tools at NREL.
+        </p>
+        <p>
+          I care about systems that are reliable under real-world load and code that a team can actually
+          maintain. Recently I've been exploring retrieval-augmented generation (RAG) for technical
+          documentation search, and I'm working toward integrating an AI assistant directly into this site.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title"><span class="section-num">02</span> Experience</h2>
+      <div class="timeline">
+
+        <article class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <h3>Post Graduate Research Software Engineer Intern</h3>
+              <p class="timeline-org">National Renewable Energy Laboratory · Golden, Colorado</p>
+            </div>
+            <p class="timeline-date">Aug 2023 – Present</p>
+          </div>
+          <ul>
+            <li>Developing an ML pipeline for transportation analysis using Random Forest models with feature engineering and cross-validation for commute mode inference on large-scale datasets (OpenPATH).</li>
+            <li>Built and maintain a public-facing dashboard for the open-source OpenPATH project (Python, Docker Compose, JavaScript, MongoDB), supporting 5,000+ active users across 34 deployment programs.</li>
+            <li>Designed automated testing workflows (GitHub Actions, Docker, pytest), increasing test reliability by 40%.</li>
+            <li>Optimized core functionality in Rust for the RouteE Compass energy-aware routing engine; administered conda-forge support for osx-arm64.</li>
+            <li>Built a ~1TB large-scale data processing pipeline for EV infrastructure grid simulation on the Kestrel HPC environment.</li>
+          </ul>
+          <p class="timeline-tags">Python · Rust · Docker · MongoDB · GitHub Actions · Pydantic · HPC</p>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <h3>Software Engineer Intern II</h3>
+              <p class="timeline-org">Yahoo Inc. · Illinois, USA</p>
+            </div>
+            <p class="timeline-date">May 2023 – Aug 2023</p>
+          </div>
+          <ul>
+            <li>Integrated four fuzzing engines, including Google FuzzTest, into Yahoo's large-scale production DNS infrastructure (C++17), identifying two critical memory management vulnerabilities.</li>
+            <li>Built CI/CD pipelines to automate fuzzing using ScrewDriver, Makefile, and CMake.</li>
+            <li>Authored a 100-page research report on fuzzing engine tradeoffs and LLVM/OpenStack integration.</li>
+          </ul>
+          <p class="timeline-tags">C++ · Linux · OpenStack · Fuzzing · CMake</p>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <h3>Software Engineer II/I</h3>
+              <p class="timeline-org">Philips Innovation Campus · Bangalore, India</p>
+            </div>
+            <p class="timeline-date">Jun 2018 – Jun 2022</p>
+          </div>
+          <ul>
+            <li>Architected a multi-threaded, low-latency (&lt;5ms) real-time audio module for the Philips Lumify iOS ultrasound app using AVAudioEngine in Swift, Objective-C, and C++.</li>
+            <li>Designed a multi-level authentication portal (C++17) with AES/SHA-256 encryption following MVVM for a new ultrasound platform.</li>
+            <li>Built ultrasound workflow features (3D Preset, Quad AFI, High Q, Pulse Wave Doppler) reducing workflow steps by 20% and improving sonographer efficiency by ~10%.</li>
+            <li>Resolved multi-threading and connectivity issues in a 20GB legacy C++ codebase; built a static-analysis CLI tool that improved delivery speed by 30%.</li>
+            <li>Mentored new engineers and led onboarding across multiple projects.</li>
+          </ul>
+          <p class="timeline-tags">C++ · C# · Swift · WPF · PACS/DICOM · Win32</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="section-num">03</span> Projects</h2>
+      <div class="project-grid">
+
+        <article class="project-card project-card-featured">
+          <p class="project-tag">Featured · RAG</p>
+          <h3>energy-rags</h3>
+          <p>Retrieval-augmented generation system for technical documentation, built to make RouteE Compass and related energy research documents searchable and queryable in natural language.</p>
+          <p class="project-tags">RAG · Python · LLMs · Documentation Search</p>
+          <a href="https://github.com/iantei/energy-rags" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+        </article>
+
+        <article class="project-card">
+          <p class="project-tag">IaaS</p>
+          <h3>AWS-Powered Scalable Image Classification System</h3>
+          <p>Fault-tolerant image classification system using EC2, S3, and SQS with auto-scaling for up to 50 concurrent requests, achieving 100% classification accuracy under 3-minute batch processing.</p>
+          <p class="project-tags">AWS EC2 · S3 · SQS · Python · Flask</p>
+        </article>
+
+        <article class="project-card">
+          <p class="project-tag">PaaS</p>
+          <h3>Serverless Video Processing &amp; Facial Recognition</h3>
+          <p>Serverless pipeline using AWS Lambda, S3, and CloudWatch for video processing and face recognition. Handled 100 concurrent uploads with FFmpeg, achieving 100% accuracy and 50-second end-to-end processing.</p>
+          <p class="project-tags">AWS Lambda · Docker · ECR · FFmpeg</p>
+        </article>
+
+      </div>
+      <p class="ai-assistant-note">An AI assistant for exploring these projects — backed by the RAG pipeline above — is in progress.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title"><span class="section-num">04</span> Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <p>Swift, C++, Objective-C, Python, C, C#, JavaScript, HTML, CSS</p>
+        </div>
+        <div class="skill-group">
+          <h3>Databases</h3>
+          <p>MongoDB, PostgreSQL</p>
+        </div>
+        <div class="skill-group">
+          <h3>Cloud &amp; DevOps</h3>
+          <p>AWS (EC2, SQS, S3, IAM, ECR), Azure DevOps, Docker, Docker Compose</p>
+        </div>
+        <div class="skill-group">
+          <h3>Tools &amp; Platforms</h3>
+          <p>D3.js, Git, GitHub Actions, Jupyter Book, Linux, Visual Studio, CMake, ScrewDriver</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <div class="container">
+      <h2 class="section-title"><span class="section-num">05</span> Education &amp; Recognition</h2>
+
+      <div class="edu-block">
+        <h3>Master of Computer Science</h3>
+        <p class="timeline-org">Arizona State University · Tempe, Arizona</p>
+        <p class="timeline-date">Aug 2022 – May 2024 · CGPA 4.13</p>
+        <p>Relevant courses: Cloud Computing, Machine Learning, Data Visualization, Software Project Management</p>
+      </div>
+
+      <div class="award-list">
+        <h3>Awards</h3>
+        <ul>
+          <li>Winner, Hackathon 2019-20 (200 participants) — High Q Doppler Trace Enabler, Philips Innovation Campus</li>
+          <li>Runner-up, Hackathon 2018-19 (150 participants) — Unified Defect Writing Tool, Philips Innovation Campus</li>
+          <li>Philips Customers First Behaviour Award 2018 · Philips Team Up to Win Award 2021, 2022</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title"><span class="section-num">06</span> Get in Touch</h2>
+      <p class="contact-lede">Open to conversations about software engineering, ML systems, and research collaborations.</p>
+      <div class="contact-links">
+        <a href="mailto:anshrest@asu.edu" class="btn btn-primary">anshrest@asu.edu</a>
+        <a href="https://www.linkedin.com/in/ananta-narayan-shrestha/" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
+        <a href="https://github.com/iantei" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> Ananta Narayan Shrestha. Built with plain HTML, CSS &amp; JS, hosted on GitHub Pages.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
