@@ -335,6 +335,16 @@ a:hover { text-decoration: underline; }
   text-align: center;
 }
 
+.opensource-note {
+  margin-top: 16px;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  text-align: center;
+}
+.opensource-note strong {
+  color: var(--text);
+}
+
 /* Skills */
 .skills-grid {
   display: grid;
