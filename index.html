@@ -38,9 +38,9 @@
       <p class="eyebrow">Software Engineer</p>
       <h1>Ananta Narayan Shrestha</h1>
       <p class="hero-lede">
-        Software engineer with 6+ years of experience shipping machine learning pipelines,
-        high-performance systems, and cloud infrastructure — from FDA-regulated medical
-        software to open-source energy research.
+        Software engineer with 6+ years of experience building large-scale data pipelines,
+        distributed systems, and cloud-native services — spanning terabyte-scale HPC data
+        processing, GenAI/RAG systems, and safety-critical C++ software.
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -62,15 +62,15 @@
       <h2 class="section-title"><span class="section-num">01</span> About</h2>
       <div class="about-grid">
         <p>
-          I'm a software engineer with a Master's in Computer Science from Arizona State University,
-          and hands-on experience spanning machine learning pipelines, embedded systems programming, and
-          cloud-native infrastructure. My background moves across the stack — from low-latency audio engines
-          on medical ultrasound devices in C++/Swift, to fuzzing production DNS infrastructure at Yahoo, to
-          building ML-driven transportation research tools at NREL.
+          I'm a software engineer with a Master's in Computer Science from Arizona State University, currently
+          building an AI-powered chatbot on AWS with Anthropic Claude and retrieval-augmented generation (RAG)
+          at Exito Tech Inc. My background spans large-scale data pipelines and distributed systems, cloud-native
+          infrastructure, and safety-critical embedded software — from terabyte-scale HPC pipelines at NREL, to
+          fuzzing production DNS infrastructure at Yahoo, to real-time audio processing at Philips.
         </p>
         <p>
           I care about systems that are reliable under real-world load and code that a team can actually
-          maintain. More recently, I've built a Retrieval-Augmented Generation (RAG) application for energy
+          maintain. I've also built a production-grade Retrieval-Augmented Generation application for energy
           policy research and contributed to open-source projects including RouteE Compass and nanvix, and
           I'm working toward integrating an AI assistant directly into this site.
         </p>
@@ -86,18 +86,32 @@
         <article class="timeline-item">
           <div class="timeline-header">
             <div>
+              <h3>Software Engineer</h3>
+              <p class="timeline-org">Exito Tech Inc. · New York, USA</p>
+            </div>
+            <p class="timeline-date">Dec 2025 – Present</p>
+          </div>
+          <ul>
+            <li>Building an AI-powered chatbot on AWS using Anthropic Claude and retrieval-augmented generation (RAG) to improve response grounding and quality.</li>
+          </ul>
+          <p class="timeline-tags">AWS · Anthropic Claude · RAG</p>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-header">
+            <div>
               <h3>Research Software Engineer</h3>
               <p class="timeline-org">National Renewable Energy Laboratory · Golden, Colorado</p>
             </div>
             <p class="timeline-date">Aug 2023 – Sep 2025</p>
           </div>
           <ul>
-            <li>Contributed to RouteE Compass, the Rust routing engine enabling Google Maps' eco-routing: TOML configuration injection, SI-unit energy model, and conda-forge packaging for OSX arm64.</li>
-            <li>Reduced test-execution time for a 1TB multi-threaded HPC data pipeline from 10 hours to 30 minutes (95%) by analyzing test-data dependencies, strategically truncating datasets, and parallelizing execution.</li>
-            <li>Contributor to OpenPATH (e-mission), NREL's open-source travel data platform: redesigned the visualization layer of the em-public-dashboard, replacing pie charts with 100% stacked bar charts supporting labeled/inferred/sensed data with a unified color scheme — 30+ merged, maintainer-reviewed PRs.</li>
-            <li>Built automated plot-testing workflows (pytest, Docker, GitHub Actions), cutting manual testing overhead ~60%.</li>
+            <li>Developed and validated a 1TB data-processing pipeline for the national EV Infrastructure grid simulation on HPC using Python, Polars, Pydantic, and Parquet, cutting execution time from 10 hours to 30 minutes (95%).</li>
+            <li>Designed automated testing workflows (GitHub Actions, Docker, pytest), cutting manual testing overhead 60%, and redesigned OpenPATH (e-mission)'s public dashboard (Python, JavaScript, MongoDB), serving 5,000+ users across 34 deployments.</li>
+            <li>Built a machine-learning pipeline (Random Forest with feature engineering and cross-validation) for deployment-stage commute-mode inference over large-scale mobility datasets.</li>
+            <li>Optimized RouteE Compass (open-source energy-aware routing engine, Rust) by refactoring JSON configuration parsing and error handling; recognized with the U.S. DOE-VTO AMC Team Award 2025 for enabling Google Maps' eco-routing.</li>
           </ul>
-          <p class="timeline-tags">Rust · Python · Docker · GitHub Actions · pytest · HPC</p>
+          <p class="timeline-tags">Python · Rust · Polars · Docker · GitHub Actions · pytest · HPC</p>
         </article>
 
         <article class="timeline-item">
@@ -109,8 +123,8 @@
             <p class="timeline-date">May 2023 – Aug 2023</p>
           </div>
           <ul>
-            <li>Owned end-to-end fuzzing research for production DNS infrastructure: learned and evaluated four engines (Google FuzzTest, LibFuzzer, AFL++, HonggFuzz) across the C++17/LLVM/Linux/Docker toolchain, identifying and reporting two critical memory-management vulnerabilities.</li>
-            <li>Authored a ~50-page engineering document analyzing engine tradeoffs and enabling reproduction of the full setup; built CI pipelines running automated fuzzing 24/7.</li>
+            <li>Integrated four fuzzing engines (Google FuzzTest, LibFuzzer, AFL++, HonggFuzz) into Yahoo's production DNS infrastructure in C++17, reporting two critical memory-management vulnerabilities.</li>
+            <li>Automated the workflow with CI/CD pipelines (ScrewDriver, CMake) and authored a ~50-page engineering report analyzing engine tradeoffs.</li>
           </ul>
           <p class="timeline-tags">C++ · LLVM · Docker · Linux · Fuzzing</p>
         </article>
@@ -118,18 +132,17 @@
         <article class="timeline-item">
           <div class="timeline-header">
             <div>
-              <h3>Software Engineer II/I</h3>
-              <p class="timeline-org">Philips Innovation Campus · Bangalore, India</p>
+              <h3>Software Engineer I &amp; II</h3>
+              <p class="timeline-org">Philips India Ltd. (Healthcare – Ultrasound) · Bangalore, India</p>
             </div>
             <p class="timeline-date">Jun 2018 – Jun 2022</p>
           </div>
           <ul>
-            <li><strong>Sole developer</strong> of a multi-threaded, low-latency (&lt;5ms) real-time audio module for the Lumify iOS app: owned requirements gathering with clinical scientists, framework selection (AVFoundation/AVAudioEngine), and delivery of the shipped feature in an FDA-regulated App Store medical product.</li>
-            <li>Engineered real-time audio-buffer processing end to end — tuning buffer sizes and sample rates against latency constraints — integrating a cross-platform C++ core with native Swift layers under an FDA-regulated release process.</li>
-            <li>Implemented real-time diagnostic algorithms (Quad AFI, High Q Doppler) in C++ under 5ms latency constraints, supporting the launch of a major new product line.</li>
-            <li>Developed a secure multi-level user-management portal (C++, C#, WPF/MVVM); mentored new recruits across Agile projects.</li>
+            <li>Architected a multi-threaded, low-latency (5ms) real-time audio processing library for the cross-platform Lumify app (Swift, C++, AVFoundation), meeting IEC 62304 safety-critical standards.</li>
+            <li>Triaged and resolved critical multi-threading and connectivity issues in a 20GB legacy C++ codebase; built a C++ static-analysis CLI tool, improving delivery speed by 30% and resolving ten high-priority production incidents.</li>
+            <li>Designed a secure multi-level user-authentication portal (C++, C#, WPF/MVVM); mentored new recruits across Agile projects.</li>
           </ul>
-          <p class="timeline-tags">Swift · C++ · AVFoundation · C# · WPF · FDA-regulated</p>
+          <p class="timeline-tags">C++ · Swift · C# · WPF · IEC 62304</p>
         </article>
 
       </div>
@@ -143,10 +156,17 @@
 
         <article class="project-card project-card-featured">
           <p class="project-tag">Featured · RAG</p>
-          <h3>Energy Policy RAG Application</h3>
-          <p>Retrieval-augmented generation system for energy policy research, with a Cloud/Local LLM toggle, Polars/Parquet ETL pipeline, Docker GPU passthrough, and an 18-test pytest suite.</p>
-          <p class="project-tags">LangChain · ChromaDB · GPT-4o-mini · Polars · Docker</p>
+          <h3>Energy Policy RAG</h3>
+          <p>Production-grade Retrieval-Augmented Generation system: Medallion ETL (Bronze/Silver/Gold) on Polars/Parquet, Docling PDF parsing, ChromaDB, LangChain, Docker/Ollama GPU inference, and an 18-test integration suite.</p>
+          <p class="project-tags">LangChain · ChromaDB · Polars · Docker · Ollama</p>
           <a href="https://github.com/iantei/energy-rags" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+        </article>
+
+        <article class="project-card">
+          <p class="project-tag">Cloud</p>
+          <h3>Scalable Serverless Cloud Pipeline</h3>
+          <p>Serverless, high-throughput data pipeline on AWS Lambda, S3, and SQS with Docker, demonstrating cloud-native design patterns.</p>
+          <p class="project-tags">AWS Lambda · S3 · SQS · Docker</p>
         </article>
 
         <article class="project-card">
@@ -156,21 +176,14 @@
           <p class="project-tags">AWS EC2 · S3 · SQS · Python · Flask</p>
         </article>
 
-        <article class="project-card">
-          <p class="project-tag">PaaS</p>
-          <h3>Serverless Video Processing &amp; Facial Recognition</h3>
-          <p>Serverless pipeline using AWS Lambda, S3, and CloudWatch for video processing and face recognition. Handled 100 concurrent uploads with FFmpeg, achieving 100% accuracy and 50-second end-to-end processing.</p>
-          <p class="project-tags">AWS Lambda · Docker · ECR · FFmpeg</p>
-        </article>
-
       </div>
       <p class="ai-assistant-note">An AI assistant for exploring these projects — backed by the RAG pipeline above — is in progress.</p>
       <p class="opensource-note">
-        <strong>Open source:</strong> contributor to
+        <strong>Open source:</strong>
         <a href="https://github.com/NatLabRockies/routee-compass" target="_blank" rel="noopener">NatLabRockies/routee-compass</a>
-        (Rust routing engine) and
+        (merged PR #364, gzip query-file support) and
         <a href="https://github.com/nanvix" target="_blank" rel="noopener">nanvix</a>
-        (Microsoft Research's Rust microkernel OS).
+        research OS (signal handling, concurrent sandbox testing, POSIX fixes).
       </p>
     </div>
   </section>
@@ -180,24 +193,20 @@
       <h2 class="section-title"><span class="section-num">04</span> Skills</h2>
       <div class="skills-grid">
         <div class="skill-group">
-          <h3>iOS &amp; Mobile</h3>
-          <p>Swift, UIKit, AVFoundation / AVAudioEngine, MVVM, Xcode, cross-platform C++ integration, real-time audio</p>
-        </div>
-        <div class="skill-group">
           <h3>Languages</h3>
-          <p>Swift, C++, Python (Pandas, NumPy, Scikit-learn), Rust, C# (WPF), SQL</p>
+          <p>Python, C++, Rust, Swift, Java, C#, JavaScript, SQL</p>
         </div>
         <div class="skill-group">
-          <h3>AI &amp; LLM</h3>
-          <p>LangChain, RAG architecture, OpenAI API; daily use of Claude Code, Cursor, Copilot</p>
+          <h3>Data &amp; Distributed Systems</h3>
+          <p>PostgreSQL, MongoDB, Polars, Parquet, ChromaDB, distributed transactions &amp; consistency, HPC (Slurm)</p>
         </div>
         <div class="skill-group">
           <h3>Cloud &amp; DevOps</h3>
-          <p>AWS (EC2, S3, SQS, Lambda), Docker, GitHub Actions, CI/CD, CMake, Linux</p>
+          <p>AWS (EC2, S3, SQS, Lambda, IAM, ECR), Docker, Docker Compose, GitHub Actions (CI/CD)</p>
         </div>
         <div class="skill-group">
-          <h3>Databases</h3>
-          <p>PostgreSQL, MongoDB</p>
+          <h3>GenAI</h3>
+          <p>Anthropic API, LangChain, RAG pipelines, Ollama, LLM-assisted development tooling</p>
         </div>
         <div class="skill-group">
           <h3>Practices</h3>
