@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience — Ananta Narayan Shrestha</title>
+<meta name="description" content="Work history: Exito Tech, National Renewable Energy Laboratory, Yahoo edge infrastructure, Philips Ultrasound R&D.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Experience — Ananta Narayan Shrestha">
+<meta property="og:description" content="Work history: Exito Tech, National Renewable Energy Laboratory, Yahoo edge infrastructure, Philips Ultrasound R&D.">
+<meta property="og:url" content="https://iantei.github.io/experience.html">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a8f3c'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' fill='white' text-anchor='middle'%3EAS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page-container">
+
+  <aside class="sidebar">
+    <div class="name"><a href="index.html">Ananta Shrestha</a></div>
+    <p class="tagline" data-text-general="Software Engineer" data-text-ios="iOS &amp; Systems Engineer">Software Engineer</p>
+    <nav class="nav-items" aria-label="Sections">
+      <div class="nav-item"><a href="index.html">About</a></div>
+      <div class="nav-item active"><a href="experience.html" aria-current="page">Experience</a></div>
+      <div class="nav-item"><a href="projects.html">Projects</a></div>
+      <div class="nav-item"><a href="Ananta_Shrestha_Resume.pdf" download
+          data-href-general="Ananta_Shrestha_Resume.pdf" data-href-ios="Ananta_Shrestha_Resume_iOS.pdf"
+          data-label-general="Résumé" data-label-ios="Résumé (iOS)">Résumé</a></div>
+    </nav>
+
+    <div class="sidebar-controls">
+      <div class="mode-toggle" role="group" aria-label="Portfolio focus">
+        <span class="mode-label">Focus</span>
+        <button type="button" class="mode-btn active" data-mode="general">general</button>
+        <button type="button" class="mode-btn" data-mode="ios">ios</button>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <main class="content">
+    <h2>Experience</h2>
+
+    <div class="row">
+      <div class="label">
+        <span class="primary">Software Engineer</span>
+        <span class="secondary">Dec 2025 – Present</span>
+      </div>
+      <div class="body">
+        <div class="org">Exito Tech Inc. · New York, NY</div>
+        <ul>
+          <li>Building an AI-powered application on AWS against the Anthropic Claude API with retrieval-augmented generation, including failure-mode handling on frontier-model API integration.</li>
+        </ul>
+        <p class="tags">AWS · Anthropic Claude · RAG</p>
+      </div>
+    </div>
+
+    <div class="row" data-emphasis="ios-secondary">
+      <div class="label">
+        <span class="primary">Research Software Engineer</span>
+        <span class="secondary">Aug 2023 – Sep 2025</span>
+      </div>
+      <div class="body">
+        <div class="org">National Renewable Energy Laboratory · Golden, Colorado</div>
+        <p class="teams">e-mission (OpenPATH) · RouteE Compass · EVI-Pro · EVI-Grid National Framework · On-Demand Transit Research</p>
+        <ul>
+          <li>Built and optimized a ~1&nbsp;TB multi-threaded HPC data pipeline for the EV Infrastructure Grid National Framework simulation (Python, Polars, Pydantic, Parquet), <strong>cutting execution time from 10 hours to 30 minutes (95%)</strong> through profiling, memory layout, and columnar I/O.</li>
+          <li>Architected a data validation layer using Pydantic to enforce strict schemas on incoming YAML configuration.</li>
+          <li><strong>Made the OpenPATH public dashboard testable, structurally.</strong> Its chart logic lived in Jupyter notebooks and <code>plots.py</code> called <code>get_ipython().run_line_magic()</code> at import time, so no test could import it at all. Decoupled the IPython dependency to be runtime-detected and optional, then built the CI harness that did not previously exist — GitHub Actions → Docker Compose → pytest with coverage, on every push/PR plus a weekly cron — replacing a five-step manual visual-inspection ritual. <em>33 PRs authored, 22 merged; the test-automation series is still open and in review.</em></li>
+          <li>Redesigned the OpenPATH dashboard's visualization layer (Python, JavaScript, MongoDB) serving 5,000+ users across 34 deployments, replacing pie charts with 100% stacked bar charts.</li>
+          <li>Contributed to <strong>RouteE Compass</strong> (Rust routing engine enabling Google Maps' eco-routing): core-crate refactor, TOML configuration injection, JSON configuration parsing and error types, SI-unit energy model, conda-forge packaging for osx-arm64. Recognized with the <strong>U.S. DOE–VTO AMR Team Award 2025</strong>.</li>
+          <li>Built a machine-learning pipeline (Random Forest with feature engineering and cross-validation) for deployment-stage commute-mode inference over large-scale mobility datasets.</li>
+        </ul>
+        <p class="tags">Python · Rust · Polars · Pydantic · Docker · GitHub Actions · pytest · HPC</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">
+        <span class="primary">Software Engineer Intern II</span>
+        <span class="secondary">May 2023 – Aug 2023</span>
+      </div>
+      <div class="body">
+        <div class="org">Yahoo Inc. · Illinois, USA</div>
+        <p class="teams">Edge Infrastructure</p>
+        <ul>
+          <li>Shipped in <strong>C++17 on large-scale production DNS infrastructure</strong>: onboarded into an unfamiliar codebase, researched and integrated four fuzzing engines (Google FuzzTest, LibFuzzer, AFL++, HonggFuzz), and <strong>identified and reported two critical memory-management vulnerabilities</strong>.</li>
+          <li>Automated builds and continuous 24/7 fuzzing via CI/CD (ScrewDriver, Makefile, CMake) in a Dockerized Linux environment; authored a ~50-page engineering report on engine tradeoffs and LLVM/OpenStack integration.</li>
+        </ul>
+        <p class="tags">C++17 · LLVM · Fuzzing · Docker · Linux · CMake</p>
+      </div>
+    </div>
+
+    <div class="row" data-emphasis="ios-primary">
+      <div class="label">
+        <span class="primary">Software Engineer I &amp; II</span>
+        <span class="secondary">Jun 2018 – Jun 2022</span>
+      </div>
+      <div class="body">
+        <div class="org">Philips India Ltd. (Ultrasound R&amp;D) · Bangalore, India</div>
+        <p class="teams">Lumify iOS App · Rhythm Service Platform · Women Health Care · Workflow Enhancement</p>
+        <ul>
+          <li><strong>Lumify iOS App:</strong> architected a multi-threaded, <strong>low-latency (5&nbsp;ms) real-time audio processing library</strong> (Swift, C++, AVFoundation/AVAudioEngine) for Pulse Wave Doppler playback, tuning buffer sizes and sample rates against a hard deadline and integrating a cross-platform C++ core with native Swift layers under an FDA-regulated release process. Replaced manual XIBs with programmatic StackViews, cutting new feature development time by 80% across 10+ UI controls and 10+ device sizes.</li>
+          <li><strong>Triaged and resolved critical multi-threading and connectivity defects in a 20&nbsp;GB legacy C++ codebase</strong>; built a C++/C# static-analysis CLI that flagged stale parameters, improving delivery speed 30% and resolving ten high-priority production incidents.</li>
+          <li><strong>Rhythm Service Platform</strong> (C++, MVVM): designed UI and backend for multi-level user login on a pub-sub design pattern over a layered architecture, maintaining &gt;95% platform-layer and &gt;85% application-layer unit-test coverage.</li>
+          <li>Designed a secure multi-level user-authentication portal (C++, C#, WPF/MVVM) with AES and SHA-256 encryption.</li>
+          <li><strong>Women Health Care &amp; Workflow Enhancement:</strong> shipped ultrasound features (Quad AFI, High Q Doppler, 3D Preset within Preset) and a new UI/UX framework for the Blaze Toolbar supporting a dynamic array of transducers, reducing exam execution time by up to 40%.</li>
+        </ul>
+        <p class="tags">C++ · Swift · C# · WPF/MVVM · AVFoundation · FDA-regulated</p>
+      </div>
+    </div>
+
+    <h2>Leadership</h2>
+
+    <div class="row">
+      <div class="label">
+        <span class="primary">Project Team Leader</span>
+        <span class="secondary">Jan 2023 – May 2023</span>
+      </div>
+      <div class="body">
+        <div class="org">Arizona State University · Tempe, Arizona</div>
+        <ul>
+          <li>Led a team of seven graduate students on a research project in information assurance and security for machine learning, targeting malicious URL detection in social networks; planned the timeline with Gantt charts while investigating DCNN and CNN approaches.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">
+        <span class="primary">Project Mentor</span>
+        <span class="secondary">May 2020 – Jun 2022</span>
+      </div>
+      <div class="body">
+        <div class="org">Philips Innovation Campus · Bangalore, India</div>
+        <ul>
+          <li>Mentored recruits and software engineers through onboarding and issue resolution across Agile projects, improving completion tracking by 20%.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Education</h2>
+
+    <div class="row">
+      <div class="label">
+        <span class="primary">M.S. Computer Science</span>
+        <span class="secondary">May 2024</span>
+      </div>
+      <div class="body">
+        <div class="org">Arizona State University · Tempe, Arizona</div>
+        <p>GPA 4.0 / 4.0. Coursework: Cloud Computing, Machine Learning, Data Visualization, Software Project Management.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">
+        <span class="primary">B.Tech. Computer Science &amp; Engineering</span>
+        <span class="secondary">May 2018</span>
+      </div>
+      <div class="body">
+        <div class="org">Motilal Nehru National Institute of Technology · Prayagraj, India</div>
+      </div>
+    </div>
+
+    <h2>Awards &amp; Publications</h2>
+
+    <div class="row tight">
+      <div class="label"><span class="primary">2025</span></div>
+      <div class="body">
+        <strong>U.S. DOE–VTO AMR Team Award</strong> — RouteE &amp; FASTSim enabled Google Maps' eco-routing feature.
+      </div>
+    </div>
+    <div class="row tight">
+      <div class="label"><span class="primary">2025</span></div>
+      <div class="body">
+        Co-author: Powell, B., Shrestha, A., et al., “Where are all the Electric Vans?”, ASCE ICTD 2025.
+      </div>
+    </div>
+    <div class="row tight">
+      <div class="label"><span class="primary">2019–22</span></div>
+      <div class="body">
+        Philips Ultrasound R&amp;D Hackathon — <strong>Winner 2019-20</strong> (High Q Doppler Trace Enabler, 200 participants); <strong>Runner-up 2018-19</strong> (Unified Defect Writing Tool, 150 participants). Planning Excellence Award Q4 2021; Customers First behaviour award 2019.
+      </div>
+    </div>
+    <p class="footer">© <span id="year"></span> Ananta Narayan Shrestha · Built with plain HTML, CSS &amp; JS, hosted on GitHub Pages.</p>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

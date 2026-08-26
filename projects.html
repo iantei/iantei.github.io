@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Ananta Narayan Shrestha</title>
+<meta name="description" content="Lock-free real-time audio, distributed consistency models, RAG systems, and merged open-source contributions to routee-compass and nanvix.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Projects — Ananta Narayan Shrestha">
+<meta property="og:description" content="Lock-free real-time audio, distributed consistency models, RAG systems, and merged open-source contributions to routee-compass and nanvix.">
+<meta property="og:url" content="https://iantei.github.io/projects.html">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a8f3c'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' fill='white' text-anchor='middle'%3EAS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page-container">
+
+  <aside class="sidebar">
+    <div class="name"><a href="index.html">Ananta Shrestha</a></div>
+    <p class="tagline" data-text-general="Software Engineer" data-text-ios="iOS &amp; Systems Engineer">Software Engineer</p>
+    <nav class="nav-items" aria-label="Sections">
+      <div class="nav-item"><a href="index.html">About</a></div>
+      <div class="nav-item"><a href="experience.html">Experience</a></div>
+      <div class="nav-item active"><a href="projects.html" aria-current="page">Projects</a></div>
+      <div class="nav-item"><a href="Ananta_Shrestha_Resume.pdf" download
+          data-href-general="Ananta_Shrestha_Resume.pdf" data-href-ios="Ananta_Shrestha_Resume_iOS.pdf"
+          data-label-general="Résumé" data-label-ios="Résumé (iOS)">Résumé</a></div>
+    </nav>
+
+    <div class="sidebar-controls">
+      <div class="mode-toggle" role="group" aria-label="Portfolio focus">
+        <span class="mode-label">Focus</span>
+        <button type="button" class="mode-btn active" data-mode="general">general</button>
+        <button type="button" class="mode-btn" data-mode="ios">ios</button>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <main class="content">
+    <h2>Projects</h2>
+
+    <div class="row">
+      <div class="label">
+        <span class="primary">Realtime Audio Lab</span>
+        <span class="secondary">Swift · C++ · vDSP</span>
+      </div>
+      <div class="body">
+        <div class="org"><a href="https://github.com/iantei/swiftui-realtime-audio" target="_blank" rel="noopener">github.com/iantei/swiftui-realtime-audio</a></div>
+        <p>
+          A tone generator and live spectrum analyser built around a <strong>lock-free
+          single-producer/single-consumer ring buffer with acquire/release atomics</strong> and
+          wait-free atomic parameter passing, so the CoreAudio render thread never allocates, locks,
+          or awaits under a ~5.3&nbsp;ms deadline (48&nbsp;kHz / 256-frame buffer). Windowed real FFT
+          via Accelerate/vDSP; PolyBLEP band-limited oscillators; Swift 6 strict concurrency with an
+          actor-owned engine and AsyncStream frame delivery. ~1,180 lines, with tests covering
+          ring-buffer wrap-around and torn reads, oscillator phase continuity, and analyser
+          calibration.
+        </p>
+        <p class="teams">Builds and runs as a macOS host app; the UI is platform-agnostic and iOS-ready but has not been run on an iOS device or Simulator.</p>
+        <p class="tags">lock-free · atomics · memory ordering · real-time DSP</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">
+        <span class="primary">Distributed Banking System</span>
+        <span class="secondary">Python · gRPC</span>
+      </div>
+      <div class="body">
+        <p>
+          Implemented <strong>client-centric consistency models</strong> — Read-Your-Writes and
+          Monotonic Writes — and <strong>Lamport's logical clocks</strong> for causal event ordering
+          across replicated servers. This is the correctness problem that sits underneath any
+          distributed cache or replicated data layer: not whether a read is fast, but which
+          guarantee the system is actually providing.
+        </p>
+        <p class="tags">consistency models · logical clocks · replication · gRPC</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">
+        <span class="primary">Energy Policy RAG</span>
+        <span class="secondary">LangChain · ChromaDB</span>
+      </div>
+      <div class="body">
+        <div class="org"><a href="https://github.com/iantei/energy-rags" target="_blank" rel="noopener">github.com/iantei/energy-rags</a></div>
+        <p>
+          Production-grade Retrieval-Augmented Generation system: Medallion ETL (Bronze/Silver/Gold)
+          on Polars and Parquet, Docling PDF parsing, ChromaDB vector store, and a Cloud/Local LLM
+          toggle (OpenAI vs. Ollama) with Docker GPU passthrough. 18-test pytest integration suite.
+          Applied few-shot prompting, chain-of-thought, and output validation to reduce hallucination
+          in the retrieval pipeline.
+        </p>
+        <p class="tags">RAG · Medallion ETL · Polars · Docker · Ollama</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">
+        <span class="primary">Serverless Cloud Pipeline</span>
+        <span class="secondary">AWS</span>
+      </div>
+      <div class="body">
+        <p>
+          High-throughput serverless pipeline for image and video processing on AWS Lambda, S3, SQS,
+          and ECR with Docker, auto-scaling for variable workloads. A companion fault-tolerant
+          classification system on EC2/S3/SQS auto-scaled to 50 concurrent requests with under
+          three-minute batch processing.
+        </p>
+        <p class="tags">Lambda · S3 · SQS · ECR · Docker · EC2</p>
+      </div>
+    </div>
+
+    <h2>Open Source</h2>
+
+    <div class="row">
+      <div class="label">
+        <span class="primary">routee-compass</span>
+        <span class="secondary">Rust · 4 merged PRs</span>
+      </div>
+      <div class="body">
+        <div class="org"><a href="https://github.com/NatLabRockies/routee-compass" target="_blank" rel="noopener">NatLabRockies/routee-compass</a></div>
+        <p>
+          Energy-aware routing engine behind Google Maps' eco-routing feature.
+          <strong>#286</strong> moved JSON getter extensions into the core crate (+83/−75 across 40
+          files); <strong>#280</strong> added SI energy-rate distance units; <strong>#285</strong>
+          added a TOML inject format for the input plugin; <strong>#483</strong> added
+          gzip-compressed query-file support to the CLI. Also conda-forge feedstock #14 for
+          osx-arm64. Recognized with the U.S. DOE–VTO AMR Team Award 2025.
+        </p>
+        <p class="tags">Rust · core-crate refactor · packaging</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">
+        <span class="primary">nanvix</span>
+        <span class="secondary">Rust · C</span>
+      </div>
+      <div class="body">
+        <div class="org"><a href="https://github.com/nanvix/nanvix" target="_blank" rel="noopener">nanvix/nanvix</a></div>
+        <p>
+          Microsoft Research's multikernel operating system for high-density serverless sandboxing.
+          Contributed <strong>error-type definitions in the kernel <code>sys</code> layer</strong> and
+          build/CI tooling — six commits merged to the <code>dev</code> branch.
+        </p>
+        <p class="tags">kernel · Rust · build tooling</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="label">
+        <span class="primary">em-public-dashboard</span>
+        <span class="secondary">33 PRs · 22 merged</span>
+      </div>
+      <div class="body">
+        <div class="org"><a href="https://github.com/e-mission/em-public-dashboard" target="_blank" rel="noopener">e-mission/em-public-dashboard</a></div>
+        <p>
+          NREL's public mobility dashboard. Drove the automated-testing effort described under
+          <a href="experience.html">Experience</a>, plus the chart, metrics, and colour work —
+          including PR #123 replacing pie charts with 100% stacked bar charts (+609/−467).
+        </p>
+        <p class="tags">Python · pytest · CI · data visualization</p>
+      </div>
+    </div>
+    <p class="footer">© <span id="year"></span> Ananta Narayan Shrestha · Built with plain HTML, CSS &amp; JS, hosted on GitHub Pages.</p>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
